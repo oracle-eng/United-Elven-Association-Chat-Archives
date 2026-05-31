@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>United Elven Association Barracks Archive</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #25282f;
+      --panel: #30343c;
+      --panel-strong: #393e47;
+      --text: #f2f3f5;
+      --muted: #b5bac1;
+      --accent: #23a55a;
+      --line: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: grid;
+      place-items: center;
+      padding: 32px 16px;
+    }
+
+    main {
+      width: min(760px, 100%);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .archive-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .archive-link {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      min-height: 86px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .archive-link:hover,
+    .archive-link:focus-visible {
+      background: var(--panel-strong);
+      border-color: var(--accent);
+      outline: none;
+      text-decoration: none;
+    }
+
+    .archive-link strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.1rem;
+    }
+
+    .archive-link span {
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .arrow {
+      color: var(--accent);
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        place-items: start center;
+      }
+
+      .archive-link {
+        grid-template-columns: 1fr;
+      }
+
+      .arrow {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>United Elven Association Barracks Archive</h1>
+    <p>Static archive pages for the UEA Barracks Discord exports.</p>
+
+    <nav class="archive-list" aria-label="Archive pages">
+      <a class="archive-link" href="general.html">
+        <span>
+          <strong>General</strong>
+          BARRACKS general channel export.
+        </span>
+        <span class="arrow" aria-hidden="true">></span>
+      </a>
+
+      <a class="archive-link" href="media.html">
+        <span>
+          <strong>Media</strong>
+          BARRACKS media channel export.
+        </span>
+        <span class="arrow" aria-hidden="true">></span>
+      </a>
+    </nav>
+
+    <footer>
+      Built for GitHub Pages. Open either archive directly, or use this page as the site index.
+    </footer>
+  </main>
+</body>
+</html>
